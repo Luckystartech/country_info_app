@@ -1,9 +1,9 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:country_list_app/src/features/presentation/controllers/country_controller.dart';
-import 'package:country_list_app/src/features/presentation/screens/country_details.dart';
-import 'package:country_list_app/src/features/presentation/widgets/country_list_tile.dart';
-import 'package:country_list_app/src/theme/app_theme_data.dart';
+import 'package:country_info_app/src/features/presentation/controllers/country_controller.dart';
+import 'package:country_info_app/src/features/presentation/screens/country_details.dart';
+import 'package:country_info_app/src/features/presentation/widgets/country_list_tile.dart';
+import 'package:country_info_app/src/theme/app_theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,5 +1,5 @@
-import 'package:country_list_app/src/features/data/country_repository.dart';
-import 'package:country_list_app/src/features/domain/country.dart';
+import 'package:country_info_app/src/features/data/country_repository.dart';
+import 'package:country_info_app/src/features/domain/country.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 ///generate all alphabets in capital letters
@@ -33,7 +33,6 @@ class CountryController
     //set state to loading
     state = const AsyncValue.loading();
 
-
     state = await AsyncValue.guard(() async {
       //fetch all countries without filters
       final countries = await _fetchAllCountries();
@@ -51,7 +50,7 @@ class CountryController
     //set state to loading
     state = const AsyncValue.loading();
     state = await AsyncValue.guard(() async {
-       //fetch all countries without filters
+      //fetch all countries without filters
       final countries = await _fetchAllCountries();
 
       //filter the countries based on name query from languages
@@ -67,7 +66,7 @@ class CountryController
   Future<void> filterCountriesByContinent(String continent) async {
     state = await AsyncValue.guard(() async {
       //get current states based on other filter
-      List<Country>  currentCountriesState = _getCurrentState();
+      List<Country> currentCountriesState = _getCurrentState();
 
       //fetch all countries without filters
       final allCountries = await _fetchAllCountries();
@@ -76,7 +75,7 @@ class CountryController
       final filteredCountries = allCountries
           .where((country) => country.continent == continent)
           .toList();
-      
+
       // add the current states based on other filters to the new filter
       currentCountriesState = [...filteredCountries];
 
@@ -89,14 +88,15 @@ class CountryController
   Future<void> filterCountriesByTimeZones(String timeZone) async {
     state = await AsyncValue.guard(() async {
       //get current states based on other filter
-      List<Country>  currentCountriesState = _getCurrentState();
+      List<Country> currentCountriesState = _getCurrentState();
 
       //fetch all countries without filters
       final allCountries = await _fetchAllCountries();
 
       //filter the countries based on timezones
-      final filteredCountries =
-          allCountries.where((country) => country.timezone == timeZone).toList();
+      final filteredCountries = allCountries
+          .where((country) => country.timezone == timeZone)
+          .toList();
 
       // add the current states based on other filters to the new filter
       currentCountriesState = [...filteredCountries];

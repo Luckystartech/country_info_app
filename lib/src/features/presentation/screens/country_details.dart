@@ -1,8 +1,8 @@
-import 'package:country_list_app/src/common_widgets.dart/rich_text_widget.dart';
-import 'package:country_list_app/src/constants/app_sizes.dart';
-import 'package:country_list_app/src/features/domain/country.dart';
-import 'package:country_list_app/src/features/presentation/widgets/country_images_view.dart';
-import 'package:country_list_app/src/theme/app_theme_data.dart';
+import 'package:country_info_app/src/common_widgets.dart/rich_text_widget.dart';
+import 'package:country_info_app/src/constants/app_sizes.dart';
+import 'package:country_info_app/src/features/domain/country.dart';
+import 'package:country_info_app/src/features/presentation/widgets/country_images_view.dart';
+import 'package:country_info_app/src/theme/app_theme_data.dart';
 import 'package:flutter/material.dart';
 
 class CountryDetails extends StatelessWidget {
@@ -19,10 +19,11 @@ class CountryDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(country.name, style: context.textTheme.headlineSmall!.copyWith(
-              color: context.colorScheme.primary,
-              fontWeight: FontWeight.bold
-            ),),
+        title: Text(
+          country.name,
+          style: context.textTheme.headlineSmall!.copyWith(
+              color: context.colorScheme.primary, fontWeight: FontWeight.bold),
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -35,7 +36,8 @@ class CountryDetails extends StatelessWidget {
                 images: images,
               ),
               gapH16,
-              RichTextWidget(title: 'Population', value: '${country.population}'),
+              RichTextWidget(
+                  title: 'Population', value: '${country.population}'),
               RichTextWidget(title: 'Region:', value: country.region),
               RichTextWidget(title: 'Capital:', value: country.capital),
               const RichTextWidget(
@@ -74,7 +76,8 @@ class CountryDetails extends StatelessWidget {
 String convertListOfLanguagesToString(List<Language> languages) {
   String sentence = '';
   for (var language in languages) {
-    sentence = sentence.isNotEmpty ? '$sentence, ${language.name}' : language.name;
+    sentence =
+        sentence.isNotEmpty ? '$sentence, ${language.name}' : language.name;
   }
   return sentence;
 }

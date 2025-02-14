@@ -1,8 +1,8 @@
-import 'package:country_list_app/src/constants/app_sizes.dart';
-import 'package:country_list_app/src/features/presentation/widgets/filters/filter_actions_widget.dart';
-import 'package:country_list_app/src/features/presentation/widgets/filters/other_filters/continent_filter.dart';
-import 'package:country_list_app/src/features/presentation/widgets/filters/other_filters/time_zone_filter.dart';
-import 'package:country_list_app/src/theme/app_theme_data.dart';
+import 'package:country_info_app/src/constants/app_sizes.dart';
+import 'package:country_info_app/src/features/presentation/widgets/filters/filter_actions_widget.dart';
+import 'package:country_info_app/src/features/presentation/widgets/filters/other_filters/continent_filter.dart';
+import 'package:country_info_app/src/features/presentation/widgets/filters/other_filters/time_zone_filter.dart';
+import 'package:country_info_app/src/theme/app_theme_data.dart';
 import 'package:flutter/material.dart';
 
 class OtherFilters extends StatelessWidget {
@@ -18,14 +18,21 @@ class OtherFilters extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-               Text('Filter', style: context.textTheme.headlineSmall!.copyWith(
+              Text(
+                'Filter',
+                style: context.textTheme.headlineSmall!.copyWith(
                     color: context.colorScheme.primary,
-                    fontWeight: FontWeight.bold),),
+                    fontWeight: FontWeight.bold),
+              ),
               IconButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                icon:  Icon(Icons.cancel, size: Sizes.p32, color: context.colorScheme.primary.withOpacity(0.3),),
+                icon: Icon(
+                  Icons.cancel,
+                  size: Sizes.p32,
+                  color: context.colorScheme.primary.withOpacity(0.3),
+                ),
               )
             ],
           ),

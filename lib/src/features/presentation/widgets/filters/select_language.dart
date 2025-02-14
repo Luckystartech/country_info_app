@@ -1,7 +1,7 @@
-import 'package:country_list_app/src/constants/app_sizes.dart';
-import 'package:country_list_app/src/constants/languages.dart';
-import 'package:country_list_app/src/features/presentation/controllers/country_controller.dart';
-import 'package:country_list_app/src/theme/app_theme_data.dart';
+import 'package:country_info_app/src/constants/app_sizes.dart';
+import 'package:country_info_app/src/constants/languages.dart';
+import 'package:country_info_app/src/features/presentation/controllers/country_controller.dart';
+import 'package:country_info_app/src/theme/app_theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -39,7 +39,11 @@ class SelectLanguage extends ConsumerWidget {
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                icon:  Icon(Icons.cancel, size: Sizes.p32, color: context.colorScheme.primary.withOpacity(0.3),),
+                icon: Icon(
+                  Icons.cancel,
+                  size: Sizes.p32,
+                  color: context.colorScheme.primary.withOpacity(0.3),
+                ),
               )
             ],
           ),

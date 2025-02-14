@@ -1,12 +1,12 @@
 import 'dart:developer';
 
-import 'package:country_list_app/src/common_widgets.dart/app_filled_button.dart';
-import 'package:country_list_app/src/common_widgets.dart/app_outlined_button.dart';
-import 'package:country_list_app/src/constants/continents.dart';
-import 'package:country_list_app/src/features/presentation/controllers/country_controller.dart';
-import 'package:country_list_app/src/features/presentation/widgets/filters/filter_actions_widget.dart';
-import 'package:country_list_app/src/features/presentation/widgets/filters/other_filters/time_zone_filter.dart';
-import 'package:country_list_app/src/theme/app_theme_data.dart';
+import 'package:country_info_app/src/common_widgets.dart/app_filled_button.dart';
+import 'package:country_info_app/src/common_widgets.dart/app_outlined_button.dart';
+import 'package:country_info_app/src/constants/continents.dart';
+import 'package:country_info_app/src/features/presentation/controllers/country_controller.dart';
+import 'package:country_info_app/src/features/presentation/widgets/filters/filter_actions_widget.dart';
+import 'package:country_info_app/src/features/presentation/widgets/filters/other_filters/time_zone_filter.dart';
+import 'package:country_info_app/src/theme/app_theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -41,10 +41,13 @@ class ContinentFilter extends ConsumerWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-             Text('Continent', style: context.textTheme.bodyLarge!.copyWith(
-                        color: context.colorScheme.primary,
-                        fontWeight: FontWeight.w600,
-                      ),),
+            Text(
+              'Continent',
+              style: context.textTheme.bodyLarge!.copyWith(
+                color: context.colorScheme.primary,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             IconButton(
               onPressed: () {
                 openFilterState.state = !isOpen;
@@ -63,10 +66,13 @@ class ContinentFilter extends ConsumerWidget {
                     checkColor: context.colorScheme.surface,
                     contentPadding: EdgeInsets.zero,
                     controlAffinity: ListTileControlAffinity.trailing,
-                    title: Text(continentOption.toList()[index], style: context.textTheme.bodyLarge!.copyWith(
+                    title: Text(
+                      continentOption.toList()[index],
+                      style: context.textTheme.bodyLarge!.copyWith(
                         color: context.colorScheme.primary,
                         fontWeight: FontWeight.w300,
-                      ),),
+                      ),
+                    ),
                     value: currentOption[index] ?? false,
                     onChanged: (value) {
                       //select language to filter by and pop immediately
@@ -84,7 +90,6 @@ class ContinentFilter extends ConsumerWidget {
                 }),
               )
             : const SizedBox.shrink(),
-       
       ],
     );
   }

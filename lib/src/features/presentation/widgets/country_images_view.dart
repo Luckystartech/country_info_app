@@ -1,5 +1,5 @@
-import 'package:country_list_app/src/common_widgets.dart/image_widget.dart';
-import 'package:country_list_app/src/constants/app_sizes.dart';
+import 'package:country_info_app/src/common_widgets.dart/image_widget.dart';
+import 'package:country_info_app/src/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -29,12 +29,14 @@ class CountryImagesView extends ConsumerWidget {
                 },
                 itemCount: images.length,
                 itemBuilder: (context, index) {
-                  return images[index] != null ? ImageWidget(
-                    imageUrl: images[index]!,
-                    width: size.width,
-                    height: size.height * 0.1,
-                    fit: BoxFit.cover,
-                  ): const SizedBox.shrink();
+                  return images[index] != null
+                      ? ImageWidget(
+                          imageUrl: images[index]!,
+                          width: size.width,
+                          height: size.height * 0.1,
+                          fit: BoxFit.cover,
+                        )
+                      : const SizedBox.shrink();
                 })),
         Positioned(
           bottom: 20, // Adjust the spacing from the bottom

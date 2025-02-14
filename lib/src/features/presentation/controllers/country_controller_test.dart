@@ -1,5 +1,5 @@
-// import 'package:country_list_app/src/features/data/country_repository.dart';
-// import 'package:country_list_app/src/features/domain/country.dart';
+// import 'package:country_info_app/src/features/data/country_repository.dart';
+// import 'package:country_info_app/src/features/domain/country.dart';
 // import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // ///generate all alphabets in capital letters

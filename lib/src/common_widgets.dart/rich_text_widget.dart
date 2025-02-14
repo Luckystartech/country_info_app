@@ -1,5 +1,5 @@
-import 'package:country_list_app/src/constants/app_sizes.dart';
-import 'package:country_list_app/src/theme/app_theme_data.dart';
+import 'package:country_info_app/src/constants/app_sizes.dart';
+import 'package:country_info_app/src/theme/app_theme_data.dart';
 import 'package:flutter/material.dart';
 
 class RichTextWidget extends StatelessWidget {
@@ -15,13 +15,13 @@ class RichTextWidget extends StatelessWidget {
         text: TextSpan(
             text: '$title: ',
             style: context.textTheme.bodyLarge!.copyWith(
-              color: context.colorScheme.primary,
-              fontWeight: FontWeight.bold
-            ),
+                color: context.colorScheme.primary,
+                fontWeight: FontWeight.bold),
             children: [
-              TextSpan(text: value, style: context.textTheme.bodyLarge!.copyWith(
-                fontWeight: FontWeight.w100
-              )),
+              TextSpan(
+                  text: value,
+                  style: context.textTheme.bodyLarge!
+                      .copyWith(fontWeight: FontWeight.w100)),
             ]),
       ),
     );

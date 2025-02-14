@@ -1,8 +1,8 @@
 import 'dart:developer';
 
-import 'package:country_list_app/src/constants/time_zones.dart';
-import 'package:country_list_app/src/features/presentation/controllers/country_controller.dart';
-import 'package:country_list_app/src/theme/app_theme_data.dart';
+import 'package:country_info_app/src/constants/time_zones.dart';
+import 'package:country_info_app/src/features/presentation/controllers/country_controller.dart';
+import 'package:country_info_app/src/theme/app_theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -10,7 +10,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // List<String> timeZoneOptions = ['Bahasa', 'Detch'];
 
 final timeZoneControllerProvider = StateProvider<Map<int, bool>>((ref) {
-
   return {};
 });
 
@@ -37,10 +36,13 @@ class TimeZoneFilter extends ConsumerWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-             Text('Time Zone', style: context.textTheme.bodyLarge!.copyWith(
-                      color: context.colorScheme.primary,
-                      fontWeight: FontWeight.w600,
-                    ),),
+            Text(
+              'Time Zone',
+              style: context.textTheme.bodyLarge!.copyWith(
+                color: context.colorScheme.primary,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             IconButton(
               onPressed: () {
                 openFilterState.state = !isOpen;
@@ -53,15 +55,18 @@ class TimeZoneFilter extends ConsumerWidget {
         ),
         isOpen
             ? SingleChildScrollView(
-              child: Column(
+                child: Column(
                   children: List.generate(timeZoneOptions.length, (index) {
                     return CheckboxListTile.adaptive(
                       contentPadding: EdgeInsets.zero,
                       controlAffinity: ListTileControlAffinity.trailing,
-                      title: Text(timeZoneOptions.toList()[index], style: context.textTheme.bodyLarge!.copyWith(
-                        color: context.colorScheme.primary,
-                        fontWeight: FontWeight.w300,
-                      ),),
+                      title: Text(
+                        timeZoneOptions.toList()[index],
+                        style: context.textTheme.bodyLarge!.copyWith(
+                          color: context.colorScheme.primary,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
                       value: currentOption[index] ?? false,
                       onChanged: (value) {
                         //select language to filter by and pop immediately
@@ -71,16 +76,15 @@ class TimeZoneFilter extends ConsumerWidget {
                             index: value
                           };
                           log(timeZoneOptions.toList()[index]);
-                        countryControllerNotifier.filterCountriesByTimeZones(
-                            timeZoneOptions.toList()[index]);
+                          countryControllerNotifier.filterCountriesByTimeZones(
+                              timeZoneOptions.toList()[index]);
                         }
                       },
                     );
                   }),
                 ),
-            )
+              )
             : const SizedBox.shrink(),
-        
       ],
     );
   }

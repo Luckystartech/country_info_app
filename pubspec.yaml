@@ -1,4 +1,4 @@
-name: country_list_app
+name: country_info_app
 description: "A new Flutter project."
 
 # Prevent accidental publishing to pub.dev.

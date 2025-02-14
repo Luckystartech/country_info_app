@@ -1,6 +1,6 @@
 {
-    "name": "country_list_app",
-    "short_name": "country_list_app",
+    "name": "country_info_app",
+    "short_name": "country_info_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,4 +1,4 @@
-import 'package:country_list_app/src/features/domain/country.dart';
+import 'package:country_info_app/src/features/domain/country.dart';
 
 final testCountryList = [
   {
@@ -326,6 +326,8 @@ final testCountryList = [
 
 void main() {
   print(testCountryList.where((country) {
-    return Country.fromMap(country as Map<String, dynamic>).name.startsWith('A');
+    return Country.fromMap(country as Map<String, dynamic>)
+        .name
+        .startsWith('A');
   }).toList());
 }

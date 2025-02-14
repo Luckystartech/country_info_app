@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # country_info_app
 The Country Info App is a mobile application that allows users to explore detailed information about countries from around the world.
 =======
 # country_list_app
+=======
+# country_info_app
+>>>>>>> 46b5afb (initial commite)
 
 A new Flutter project.
 

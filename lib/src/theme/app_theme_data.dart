@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:country_list_app/src/constants/app_sizes.dart';
-import 'package:country_list_app/src/theme/theme_mode_controller.dart';
+import 'package:country_info_app/src/constants/app_sizes.dart';
+import 'package:country_info_app/src/theme/theme_mode_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -90,7 +90,7 @@ class AppThemeData {
       iconTheme: _commonTheme.iconTheme,
       appBarTheme: AppBarTheme(foregroundColor: _lightModeColorScheme.primary));
 
-      //dark Theme 
+  //dark Theme
   ThemeData _darkTheme() => ThemeData.dark().copyWith(
         textTheme: _commontextTheme.copyWith(
           titleLarge: _commontextTheme.titleLarge!
@@ -108,10 +108,7 @@ class AppThemeData {
             .copyWith(backgroundColor: _darkModeColorScheme.surface),
         checkboxTheme: _commonTheme.checkboxTheme,
         iconTheme: _commonTheme.iconTheme,
-        appBarTheme: AppBarTheme(
-          foregroundColor: _darkModeColorScheme.primary
-        ),
-        
+        appBarTheme: AppBarTheme(foregroundColor: _darkModeColorScheme.primary),
       );
 }
 

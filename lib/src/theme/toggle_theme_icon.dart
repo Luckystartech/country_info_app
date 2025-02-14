@@ -1,4 +1,4 @@
-import 'package:country_list_app/src/constants/app_sizes.dart';
+import 'package:country_info_app/src/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -32,7 +32,8 @@ class ToggleThemeIcon extends ConsumerWidget {
         icon: Icon(
           themeMode == ThemeMode.light
               ? Icons.light_mode_outlined
-              : Icons.dark_mode_outlined, size: Sizes.p32,
+              : Icons.dark_mode_outlined,
+          size: Sizes.p32,
         ));
   }
 }

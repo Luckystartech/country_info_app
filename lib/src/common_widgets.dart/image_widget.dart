@@ -1,4 +1,4 @@
-import 'package:country_list_app/src/constants/app_sizes.dart';
+import 'package:country_info_app/src/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 
 class ImageWidget extends StatelessWidget {
@@ -21,9 +21,7 @@ class ImageWidget extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       width: width,
       height: height,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(Sizes.p12)
-      ),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(Sizes.p12)),
       child: Image.network(imageUrl, fit: fit),
     );
   }

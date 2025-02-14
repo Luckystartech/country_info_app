@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:country_list_app/src/features/domain/country.dart';
+import 'package:country_info_app/src/features/domain/country.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 

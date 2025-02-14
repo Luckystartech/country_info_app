@@ -1,4 +1,4 @@
-import 'package:country_list_app/src/constants/app_sizes.dart';
+import 'package:country_info_app/src/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 
 class AppOutlinedButton extends StatelessWidget {
@@ -16,7 +16,7 @@ class AppOutlinedButton extends StatelessWidget {
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
           shape: RoundedRectangleBorder(
-              side:  BorderSide(color: colorScheme.primary, width: 2),
+              side: BorderSide(color: colorScheme.primary, width: 2),
               borderRadius: BorderRadius.circular(Sizes.p4)),
           fixedSize: Size(width, Sizes.custom(50))),
       child: Text(label),

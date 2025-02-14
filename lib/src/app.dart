@@ -1,5 +1,5 @@
-import 'package:country_list_app/src/features/presentation/screens/country_list.dart';
-import 'package:country_list_app/src/theme/app_theme_data.dart';
+import 'package:country_info_app/src/features/presentation/screens/country_list.dart';
+import 'package:country_info_app/src/theme/app_theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
