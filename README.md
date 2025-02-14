@@ -1,38 +1,86 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# country_info_app
-The Country Info App is a mobile application that allows users to explore detailed information about countries from around the world.
-=======
-# country_list_app
-=======
-# country_info_app
->>>>>>> 46b5afb (initial commite)
+# 🌍 Country Info App with Theme Customization  
 
-A new Flutter project.
+## 📖 Description  
+The **Country Info App** is a mobile application built with Flutter that allows users to explore and view detailed information about countries around the world. The app supports **light and dark themes** and offers a responsive design for a seamless experience across different devices.  
 
-## Getting Started
+Users can search for countries, view their flag, population, capital, continent, and other details, and toggle between themes with a single tap. The app is deployed on **Appetize.io**, making it easy to test directly in a browser.  
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/to/state-management-sample).
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Key Features  
 
-## Assets
+### 🌏 Country List  
+- Fetches and displays a list of countries from the Country API.  
+- Includes a search bar to filter countries by name.  
 
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
+### 🗺️ Country Details  
+- Displays the following information about a selected country:  
+  - Name  
+  - Flag  
+  - Country code  
+  - Capital city  
+  - Population  
+  - Continent  
+  - Current president (if available)  
+  - States/provinces (if applicable)  
+- "Back" button to return to the country list.  
 
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/to/resolution-aware-images).
+### 🎨 Theme Customization  
+- Supports **light** and **dark** themes.  
+- The theme is applied across all UI components (backgrounds, text, buttons, etc.).  
 
-## Localization
+### 📱 Responsive Design  
+- Optimized for various screen sizes and device types.  
 
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
+### 🌐 App Deployment  
+- Hosted on **Appetize.io** for easy access and testing on different devices and browsers.  
 
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter apps](https://flutter.dev/to/internationalization).
->>>>>>> a496dd7 (Initial commit)
+---
+## Screenshots
+
+- ![screenshot 1](assets/screenshots/Screenshot_1739561619.png)
+- ![screenshot 2](assets/screenshots/Screenshot_1739561630.png)
+- ![screenshot 1](assets/screenshots/Screenshot_1739561636.png)
+- ![screenshot 2](assets/screenshots/Screenshot_1739561642.png)
+
+
+## 🛠 Tech Stack  
+- **Framework:** Flutter  
+- **State Management:** Riverpod  
+- **API:** Country API  
+
+---
+
+## Installation
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/Luckystartech/GitGo.git
+    cd gitgo_app
+    ```
+
+2. **Install dependencies**:
+    ```bash
+    flutter pub get
+    ```
+
+3. **Run the app**:
+    ```bash
+    flutter run
+    ``
+
+## 📂 Project Structure  
+```bash
+lib  
+ ├── features/  
+ │   ├── data/          # Data layer (API integration, models)  
+ │   ├── domain/        # Business logic  
+ │   └── presentation/  # UI components (screens, widgets)  
+ ├── theme/       # theme settings  
+ └── main.dart          # Entry point  
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out to me at [gmail](luckyekpebe123@gmail.com).
+
+
